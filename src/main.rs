@@ -1,7 +1,12 @@
 use std::io;   // This is the io library from the standard library
+use rand::Rng;  // This is the rand library from the standard library
 
 fn main() { // main function is the entry point of the program
     println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);  // This generates a random number between 1 and 100
+
+    println!("The secret number is: {}", secret_number); // This prints the secret number to the console"
 
     println!("Please enter your guess number");
 
@@ -14,3 +19,4 @@ fn main() { // main function is the entry point of the program
 
     println!("You guessed: {}", guess);
 }
+
